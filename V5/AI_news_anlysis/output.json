@@ -1,0 +1,14 @@
+{
+    "NVDA": {
+        "https://finance.yahoo.com/video/nvidia-stock-pops-citi-opens-145443571.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        }
+    },
+    "TSLA": {
+        "https://finance.yahoo.com/news/tesla-layoffs-an-ominous-sign-for-the-company-analyst-says-153652031.html": {
+            "score": -0.866,
+            "conclusion": "negative"
+        }
+    }
+}
