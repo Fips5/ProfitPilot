@@ -3,6 +3,27 @@ from bs4 import BeautifulSoup
 import json
 
 one_co_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\fundamentl_extraction\one_co.json'
+symbol_list_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\results\TB_nalysed_stocks.json'
+
+def clear_file(file_path):
+    try:
+        with open(file_path, "w") as json_file:
+            print('***FILE CEARED***')
+    except Exception as e:
+        print(f"Error creating the JSON file: {e}")
+
+def extract_keys_from_json(json_file_path):
+    try:
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+            keys = list(data.keys())
+            return keys
+    except FileNotFoundError:
+        print("File not found. Please provide a valid file path.")
+        return []
+    except json.JSONDecodeError:
+        print("Invalid JSON format in the file. Please provide a valid JSON file.")
+        return []
 
 def get_td_content(url):
     td_contents = []  
@@ -27,18 +48,37 @@ def get_td_content(url):
         print("Failed to retrieve content from the URL.")
         return None
     
-url = "https://www.google.com/finance/quote/NVDA:NASDAQ" 
-td_content_list, cut_list = get_td_content(url)
+symbol_list = extract_keys_from_json(symbol_list_file_path) 
+
+clear_file(one_co_file_path) 
 
 keys = ['Revenue', 'Operating expense','RevenueNet', 'Net profit margin', 'Earnings per share', 'EBITDAEarnings', 'Effective tax rate', 'Cash and short-term investments', 'Total assets', 'Total liabilities', 'Total equit', 'Shares outstanding', 'Price to book', 'Return on assets', 'Return on capital', 'Net income', 'Cash from operation', 'Cash from investing', 'Cash from financing', 'Net change in cash', 'Free cash flow']
-
-if len(cut_list) == len(keys):
-    my_dict = dict(zip(keys, cut_list))
-    print(my_dict)
-else:
-    print("Lists are of different lengths. Cannot create dictionary.")
-
-with open(one_co_file_path, "w") as json_file:
-    json.dump(my_dict, json_file)
+with open(one_co_file_path, "a") as json_file:
+    json_file.write('[ ')
+    json_file.write('\n')
+for symbol in symbol_list:
+    url = f"https://www.google.com/finance/quote/{symbol}:NASDAQ" 
+    symbol_list = extract_keys_from_json(symbol_list_file_path) 
+    td_content_list, cut_list = get_td_content(url)
+    if len(cut_list) == len(keys):
+        my_dict = dict(zip(keys, cut_list))
+        if symbol != symbol_list[-1]:
+            with open(one_co_file_path, "a") as json_file:
+                json.dump({symbol: my_dict}, json_file)
+                json_file.write('\n')
+                json_file.write(', ')
+            print(f'{symbol}:')
+            print(my_dict)
+        if symbol == symbol_list[-1]:
+            with open(one_co_file_path, "a") as json_file:
+                json.dump({symbol: my_dict}, json_file)
+                json_file.write('\n')
+            print(f'{symbol}:')
+            print(my_dict)
+    else:
+        print("Lists are of different lengths. Cannot create dictionary.")
+        continue
+with open(one_co_file_path, "a") as json_file:
+    json_file.write(']')
 
 print("Dictionary successfully saved to", one_co_file_path)
