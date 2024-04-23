@@ -1,4 +1,8 @@
 {
     "NVDA":"Nvidia",
-    "TSLA":"Tesla"
+    "TSLA":"Tesla",
+    "GOOG": "Alphabet",
+    "META": "Meta Platforms Inc.",
+    "MSFT": "Miscrosoft",
+    "NFLX": "Netflix Inc."
 }
