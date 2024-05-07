@@ -1,14 +1,23 @@
 {
-    "NVDA": {
-        "https://finance.yahoo.com/video/nvidia-stock-pops-citi-opens-145443571.html": {
-            "score": 0.6249,
+    "NVDA": {},
+    "TSLA": {
+        "https://finance.yahoo.com/news/5-things-i-want-to-hear-from-tesla-ceo-elon-musk-at-the-milken-conference-123017130.html": {
+            "score": 0.8666,
             "conclusion": "positive"
         }
     },
-    "TSLA": {
-        "https://finance.yahoo.com/news/tesla-layoffs-an-ominous-sign-for-the-company-analyst-says-153652031.html": {
-            "score": -0.866,
-            "conclusion": "negative"
+    "GOOG": {
+        "https://finance.yahoo.com/news/jll-nyse-jll-reports-upbeat-114022223.html": {
+            "score": 0.9986,
+            "conclusion": "positive"
         }
-    }
+    },
+    "META": {},
+    "MSFT": {
+        "https://finance.yahoo.com/news/jll-nyse-jll-reports-upbeat-114022223.html": {
+            "score": 0.9986,
+            "conclusion": "positive"
+        }
+    },
+    "NFLX": {}
 }

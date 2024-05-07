@@ -4,6 +4,8 @@ import pandas as pd
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
+print('RUNNING NEWS EXTRACTION')
+
 # Replace "YOUR_NEWS_API_KEY_HERE" with your actual News API key
 NEWS_API_KEY = ['97e77dd430f345aab9c79c30c34604b9', '6f1dc9d98c374fb5b923b219e0d82a51', '2b5d8c7991e64d3788482e65196ef314' ]
 #'1244e700ddc541ca8f1090038d64de82'
@@ -79,7 +81,6 @@ clear_file(R'C:\Users\David\Documents\ProfitPilot\V5\news_extrction\output.json'
 
 tickers = extract_names(full_stock_list_path)
 comp_names =  extract_symbols(full_stock_list_path)
-print(f'Tickers: {tickers}')
 # Get news articles 
 
 ticker_news = get_news_for_tickers(tickers, key = NEWS_API_KEY[1])
@@ -87,10 +88,3 @@ ticker_news = get_news_for_tickers(tickers, key = NEWS_API_KEY[1])
 # Save 
 output_path = r'C:\Users\David\Documents\ProfitPilot\V5\news_extrction\output.json'
 save_to_json(ticker_news, output_path)
-
-for ticker, articles in ticker_news.items():
-    print(f"Ticker: {ticker}")
-    for url, content in articles.items():
-        print(f"URL: {url}")
-        print(f"Content: {content}")
-        print("----------------------------------")

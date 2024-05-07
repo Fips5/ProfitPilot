@@ -10,8 +10,6 @@ score_bord = []
 for item in data:
     for company, info in item.items():
         df = pd.DataFrame(info, index=[0])
-        print(f"DataFrame for {company}:")
-        print(df)
         score = 0
 
 

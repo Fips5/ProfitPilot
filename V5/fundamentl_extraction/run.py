@@ -5,6 +5,8 @@ import json
 one_co_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\fundamentl_extraction\one_co.json'
 symbol_list_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\results\TB_nalysed_stocks.json'
 
+print('RUNNING FUNDAMENTAL EXTRACTION')
+
 def clear_file(file_path):
     try:
         with open(file_path, "w") as json_file:
@@ -67,14 +69,10 @@ for symbol in symbol_list:
                 json.dump({symbol: my_dict}, json_file)
                 json_file.write('\n')
                 json_file.write(', ')
-            print(f'{symbol}:')
-            print(my_dict)
         if symbol == symbol_list[-1]:
             with open(one_co_file_path, "a") as json_file:
                 json.dump({symbol: my_dict}, json_file)
                 json_file.write('\n')
-            print(f'{symbol}:')
-            print(my_dict)
     else:
         print("Lists are of different lengths. Cannot create dictionary.")
         continue

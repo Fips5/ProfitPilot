@@ -1,6 +1,8 @@
 import json
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+print('RUNNING AI NEWS ANALYSIS')
+
 article_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\news_extrction\output.json'
 output_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\AI_news_anlysis\output.json'
 def clear_file(file_path):
