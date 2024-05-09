@@ -1,23 +1,199 @@
 {
     "NVDA": {},
     "TSLA": {
+        "https://finance.yahoo.com/news/elon-musk-talks-mars-ai-and-threats-to-civilization--but-not-a-word-of-tesla-025840228.html": {
+            "score": -0.278,
+            "conclusion": "negative"
+        },
+        "https://finance.yahoo.com/news/down-57-highs-tesla-nasdaq-214758046.html": {
+            "score": 0.9988,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/reddits-first-quarterly-report-follows-elon-musks-lead-morning-brief-100036766.html": {
+            "score": 0.9479,
+            "conclusion": "positive"
+        },
         "https://finance.yahoo.com/news/5-things-i-want-to-hear-from-tesla-ceo-elon-musk-at-the-milken-conference-123017130.html": {
             "score": 0.8666,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/11-stocks-that-mattered-most-this-earnings-season-133609642.html": {
+            "score": 0.9861,
             "conclusion": "positive"
         }
     },
     "GOOG": {
+        "https://finance.yahoo.com/news/apple-beats-q2-estimates-as-iphone-sales-decline-10-091232309.html": {
+            "score": 0.9876,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/why-offerpad-opad-stock-down-162224984.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/matterport-nasdaq-mttr-reports-q1-210051046.html": {
+            "score": 0.9949,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/playstudioss-nasdaq-myps-q1-sales-202349318.html": {
+            "score": 0.9983,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/google-debuts-499-pixel-8a-as-it-pushes-generative-ai-to-more-consumers-160025811.html": {
+            "score": 0.9793,
+            "conclusion": "positive"
+        },
         "https://finance.yahoo.com/news/jll-nyse-jll-reports-upbeat-114022223.html": {
             "score": 0.9986,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/purple-nasdaq-prpl-misses-q1-210503348.html": {
+            "score": 0.9971,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/11-stocks-that-mattered-most-this-earnings-season-133609642.html": {
+            "score": 0.9861,
             "conclusion": "positive"
         }
     },
     "META": {},
     "MSFT": {
+        "https://finance.yahoo.com/news/apple-beats-q2-estimates-as-iphone-sales-decline-10-091232309.html": {
+            "score": 0.9876,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/why-offerpad-opad-stock-down-162224984.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/these-3-stocks-are-poised-to-benefit-from-the-massive-energy-transition-080042965.html": {
+            "score": 0.9965,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/matterport-nasdaq-mttr-reports-q1-210051046.html": {
+            "score": 0.9949,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/playstudioss-nasdaq-myps-q1-sales-202349318.html": {
+            "score": 0.9983,
+            "conclusion": "positive"
+        },
         "https://finance.yahoo.com/news/jll-nyse-jll-reports-upbeat-114022223.html": {
             "score": 0.9986,
             "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/purple-nasdaq-prpl-misses-q1-210503348.html": {
+            "score": 0.9971,
+            "conclusion": "positive"
         }
     },
-    "NFLX": {}
+    "NFLX": {
+        "https://finance.yahoo.com/news/golden-opportunity-enter-u-stock-123000515.html": {
+            "score": 0.9998,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/insider-sale-co-ceo-gregory-170057689.html": {
+            "score": 0.9582,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/insider-sale-director-anne-sweeney-064725305.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/reddits-first-quarterly-report-follows-elon-musks-lead-morning-brief-100036766.html": {
+            "score": 0.9479,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/disney-reaches-profitability-entertainment-streaming-141736700.html": {
+            "score": 0.9973,
+            "conclusion": "positive"
+        }
+    },
+    "AMZN": {
+        "https://finance.yahoo.com/news/golden-opportunity-enter-u-stock-123000515.html": {
+            "score": 0.9998,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        }
+    },
+    "ADBE": {},
+    "DIS": {
+        "https://finance.yahoo.com/news/disney-reaches-profitability-entertainment-streaming-141736700.html": {
+            "score": 0.9973,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-stocks-open-higher-disney-sinks-after-earnings-133454824.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-us-futures-take-a-breather-as-disney-earnings-land-110634487.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/warner-bros-discovery-earnings-preview-investors-eye-nba-updates-amid-linear-tv-turmoil-185924559.html": {
+            "score": 0.9923,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-tech-drags-stocks-lower-as-rally-hits-pause-121113587.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        }
+    },
+    "JPM": {
+        "https://finance.yahoo.com/news/1-regeneron-misses-profit-estimates-104405423.html": {
+            "score": 0.8402,
+            "conclusion": "positive"
+        }
+    },
+    "GOOGL": {
+        "https://finance.yahoo.com/news/golden-opportunity-enter-u-stock-123000515.html": {
+            "score": 0.9998,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/apple-beats-q2-estimates-as-iphone-sales-decline-10-091232309.html": {
+            "score": 0.9876,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/keep-buying-alphabet-stock-nasdaq-023356388.html": {
+            "score": 0.9993,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/google-debuts-499-pixel-8a-as-it-pushes-generative-ai-to-more-consumers-160025811.html": {
+            "score": 0.9793,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/11-stocks-that-mattered-most-this-earnings-season-133609642.html": {
+            "score": 0.9861,
+            "conclusion": "positive"
+        }
+    },
+    "RDDT": {
+        "https://finance.yahoo.com/news/reddits-first-quarterly-report-follows-elon-musks-lead-morning-brief-100036766.html": {
+            "score": 0.9479,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/the-meme-stock-surge-doesnt-appear-to-be-the-ominous-signal-it-has-been-100043985.html": {
+            "score": 0.8796,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-tech-drags-stocks-lower-as-rally-hits-pause-121113587.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        }
+    }
 }

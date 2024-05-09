@@ -31,6 +31,7 @@ def get_price_data(symbol_list, sma, lma, days_num, json_path, interval):
     
     for symbol in symbol_list:
         try:
+            print(f'\n{symbol}\n')
             data = yf.download(symbol, start=start_date, end=end_date, interval=interval)
             df = data.reset_index()
 

@@ -53,7 +53,7 @@ def extract_content(url):
 
 def get_news_articles(ticker, key):
     # Define the base URL and parameters for the News API
-    origin_date = (datetime.now() - timedelta(days=3)).strftime('%Y-%m-%d')
+    origin_date = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     df = get_news_raw_data(ticker, origin_date, key)
     
     yahoo_finance_articles = df[df['url'].str.contains('finance.yahoo.com')]

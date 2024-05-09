@@ -9,6 +9,19 @@ import os
 TIME = 35
 MAX_ENTRIES = 20
 
+coordonates_json_path = r'C:\Users\David\Documents\ProfitPilot\V5\XY\coordinates.json'
+
+def read_coordinates_from_json(filename):
+    with open(filename, 'r') as f:
+        coordinates = json.load(f)
+    return coordinates
+
+print('\n \n \n \n ')
+print('BEFORE STARTING LOCATE THE COORDONATES TO GET EXTRACT THE PRICES')
+print('\n \n \n \n ')
+
+coordinates_buy = read_coordinates_from_json(coordonates_json_path)
+
 json_paths = [
     r'C:\Users\David\Documents\ProfitPilot\V5\json_prices\price_1.json',
     r'C:\Users\David\Documents\ProfitPilot\V5\json_prices\price_2.json',
@@ -17,7 +30,7 @@ json_paths = [
     r'C:\Users\David\Documents\ProfitPilot\V5\json_prices\price_5.json',
     r'C:\Users\David\Documents\ProfitPilot\V5\json_prices\price_6.json'
 ]
-
+'''
 coordinates_buy = [
     (1047, 259, 1111, 293),     #1
     (1047, 332 , 1111, 357),    #2
@@ -26,7 +39,7 @@ coordinates_buy = [
     (1047, 516 , 1111, 547),    #5
     (1047, 580 , 1111, 609),    #6
 ]
-
+'''
 screenshot_paths = [
     r'C:\Users\David\Documents\ProfitPilot\V5\screenshots\screenshot_1.png',
     r'C:\Users\David\Documents\ProfitPilot\V5\screenshots\screenshot_2.png',
@@ -75,12 +88,12 @@ def tesseract(coordinates_buy, json_paths):
                 screenshot = pyautogui.screenshot(region=region)
                 screenshot.save(path)
 
-                print("Performing OCR...")
+                #print("Performing OCR...")
                 text = pytesseract.image_to_string(screenshot, config=custom_config)
                 price = float(text[:-1]) if text else '0'
                 prices.append(price)
-                print(price)
-            print(prices)
+                #print(price)
+            #print(prices)
             save_price_to_data(prices, json_paths)
             time.sleep(TIME)
     except Exception as e:
