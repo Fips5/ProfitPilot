@@ -35,8 +35,13 @@ subprocess.run(['python', path_technical_anlysis])
 
 def news_read(json_file_path):
     sentiment_dict = {}
-    with open(json_file_path, 'r') as file:
-        json_data = json.load(file)
+    
+    try:
+        with open(json_file_path, 'r') as file:
+            json_data = json.load(file)
+    except json.decoder.JSONDecodeError:
+        print("JSON decoding error: File is empty or not in valid JSON format.")
+        return sentiment_dict
 
     for company, articles in json_data.items():
         positive_count = 0
@@ -105,10 +110,10 @@ one_day_technical_path = r'C:\Users\David\Documents\ProfitPilot\V5\technical_ana
 one_hour_technical_path = r'C:\Users\David\Documents\ProfitPilot\V5\technical_analisis\1h.json'
 fiveten_min_technical_path = r'C:\Users\David\Documents\ProfitPilot\V5\technical_analisis\15m.json'
 
-fiveten_min_technical_df = technical_read(fiveten_min_technical_path)
-one_hour_technical_df = technical_read(one_hour_technical_path)
-one_day_technical_df = technical_read(one_day_technical_path)
-five_days_technical_df = technical_read(five_days_technical_path)
+fiveten_min_technical_df = technical_read(fiveten_min_technical_path)   #1
+one_hour_technical_df = technical_read(one_hour_technical_path)         #2
+one_day_technical_df = technical_read(one_day_technical_path)           #3
+five_days_technical_df = technical_read(five_days_technical_path)       #4
 
 def fundamental_read(file_path):
     try:
@@ -139,6 +144,9 @@ def fundamental_read(file_path):
     
 fundamental_output_path = r'C:\Users\David\Documents\ProfitPilot\V5\fundamentl_extraction\one_co.json'
 fundametal_df = fundamental_read(fundamental_output_path)
+
+interval_decision_list = [1, 2, 3, 4]
+intreval_weight_list = [1, 1, 0.5, 0.5]
 
 general_df = pd.merge(one_hour_technical_df, news_df, on='Symbol')
 
@@ -200,10 +208,3 @@ NEWS DICT: {'NVDA': 0.5, 'TSLA': 0.5, 'GOOG': 1, 'META': 0.5, 'MSFT': 1, 'NFLX':
 5   NFLX        1        0         0.5
 
 '''
-
-
-
-
-
-
-

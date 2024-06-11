@@ -7,10 +7,12 @@ import time
 from buy import buy
 from close import close
 
+time.sleep(120)
+
 TIME = 53
 #Indicatori:
 SMA = 7
-LMA = 24
+LMA = 20
 PVTW = 10
 HGW = 10
 #Setari Pozitii:
@@ -33,6 +35,14 @@ price_json_paths = [
     r'C:\Users\David\Documents\ProfitPilot\V5\json_prices\price_6.json'
 ]
 
+
+premarket_output_path  = r'C:\Users\David\Documents\ProfitPilot\V5\Premarket_Results\output.json'
+with open(premarket_output_path, 'r') as file:
+    premarket_data = json.load(file)
+
+symbols_list = premarket_data['output']
+
+
 def profit_save(number):
     with open(r'C:\Users\David\Desktop\Pilot\END_PRODUCT\proft_test.txt', 'a') as file:
         file.write(f"{number} + ")
@@ -49,21 +59,22 @@ def json_price_to_df(file_path):
     
     return df
 
-def main(price_json_paths, pos):
-    for file_path in price_json_paths:
-
+def main(price_json_paths, pos, symbols_list):
+    for file_path, symbol in zip(price_json_paths,symbols_list):
+        path_list_index = price_json_paths.index(file_path)
         df = json_price_to_df(file_path)
 
         file_num = file_path[58]
+        id = file_num
 
-        print(f'FILE {file_num} : {df["Close"].iloc[-1]}')
+        print(f'ID: {id}, {symbol} : {df["Close"].iloc[-1]}')
 
         df['SMA'] = df['Close'].rolling(SMA).mean()
         df['LMA'] = df['Close'].rolling(LMA).mean()
         df['MACD'] = df['SMA'] - df['LMA']
         df['SL'] = df['MACD'].rolling(window=9, min_periods=1).mean()
-        df['High'] = df['Close'].shift(1).cummax()  
-        df['Low'] = df['Close'].shift(1).cummin()
+        #df['High'] = df['Close'].shift(1).cummax()  
+        #df['Low'] = df['Close'].shift(1).cummin()
 
         if pos == 0:
             openPrice = 25000
@@ -76,7 +87,7 @@ def main(price_json_paths, pos):
 
          #CONDITION  - BUY
         #and (df['MACD'].iloc[-1] > df['SL'].iloc[-1]).any()
-        if(df['SMA'].iloc[-1] > df['LMA'].iloc[-1]).any()  and pos == 0:
+        if((df['SMA'].iloc[-1] > df['LMA'].iloc[-1]) and (abs(df['SMA'].iloc[-1] - df['LMA'].iloc[-1]) / df['LMA'].iloc[-1] >= 0.0025)).any()  and pos == 0:
             BuyCondition = True
     
         #CONDITION - SELL
@@ -96,14 +107,11 @@ def main(price_json_paths, pos):
 
         #    BUY
         if BuyCondition is not None and BuyCondition == True:
-            stopLoss = df['stopLoss'].iloc[-1]
-            takeProfit = df['takeProfit'].iloc[-1]
             price = df['Close'].iloc[-1]
             lma = df['LMA'].iloc[-1]
             sma = df['SMA'].iloc[-1]
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            print(f' BUY - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}')
-            buy()
+            buy(symbol,path_list_index)
             pos = 1
             buyOpenPrice = df['Close'].iloc[-1] 
             BuyCondition = False
@@ -129,7 +137,7 @@ def main(price_json_paths, pos):
             close()
             ClosePrice = price
             BuyProfit = ((ClosePrice - buyOpenPrice)/ buyOpenPrice)* 100
-            print(f'SMA CLOSE ({BuyProfit}) - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}') 
+            print(f'CLOSE ({BuyProfit}) - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}') 
             pos = 0
             lstpos = 1
             profit_save(BuyProfit)
@@ -156,10 +164,8 @@ def main(price_json_paths, pos):
             price = df['Close'].iloc[-1]
             lma = df['LMA'].iloc[-1]
             sma = df['SMA'].iloc[-1]  
-            # stopLoss = stopLoss + ( stopLoss*TSP)
-            #takeProfit = takeProfit + ( takeProfit * TTP)
             pos = 1
-            print(f'OPEN BUY - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}, stopLoss: {stopLoss}, ')
+            print(f'OPEN BUY - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}, ')
 
     #   OPEN SELL
         Cprice = df['Close'].iloc[-1]
@@ -168,12 +174,10 @@ def main(price_json_paths, pos):
             price = df['Close'].iloc[-1]
             lma = df['LMA'].iloc[-1]
             sma = df['SMA'].iloc[-1]  
-            #stopLossSELL = stopLossSELL - ( stopLoss*TSP)
-            #takeProfitSELL = takeProfitSELL - ( takeProfit * TTP)
             stopLoss = "NaN"
             takeProfit = "NaN"
             pos = 2
-            print(f'OPEN SELL - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}, stopLoss: {stopLoss}, ')
+            print(f'OPEN SELL - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma} ')
 
     #   NO ACTION
         if pos == 0:
@@ -196,8 +200,8 @@ def main(price_json_paths, pos):
                     sma = df['SMA'].iloc[-1]
                     pos = 1
                     buyOpenPrice = df['Close'].iloc[-1]
-                    print(f'RE-ENTER BUY - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}, stopLoss: {stopLoss}')
-                    buy()
+                    print(f'RE-ENTER BUY - time: {timestamp}, Close: {price}, MAL: {lma}, MS: {sma}')
+                    buy(path_list_index)
                     BUY_reentry_condition = 0
         while pos == 1:
             time.sleep(TIME)
@@ -208,5 +212,5 @@ print(f'START { start_timestamp }')
 stpos = 0
 
 while True:
-    main(price_json_paths, pos)
+    main(price_json_paths, pos, symbols_list)
     time.sleep(TIME)

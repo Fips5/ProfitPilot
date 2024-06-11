@@ -25,3 +25,25 @@ def save_coordinates_to_json(coordinates, filename):
         json.dump(coordinates, f)
 
 save_coordinates_to_json(coordinates_buy, coordonates_path)
+
+def calculate_center_coordinates(segments):
+    centers = []
+    for segment in segments:
+        xA, yA, xB, yB = segment
+        xC = (xA + xB) / 2
+        yC = (yA + yB) / 2
+        centers.append([xC, yC])
+    return centers
+
+centers = calculate_center_coordinates(coordinates_buy)
+
+def save_centers(data, filename):
+    try:
+        with open(filename, 'w') as file:
+            json.dump(data, file, indent=4)
+    except Exception as e:
+        print(f"An error occurred while saving to JSON: {e}")
+    
+centers_json_path = r'C:\Users\David\Documents\ProfitPilot\V5\XY\centers.json'
+
+save_centers(centers, centers_json_path)

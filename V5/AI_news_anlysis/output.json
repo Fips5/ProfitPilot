@@ -1,199 +1,253 @@
 {
-    "NVDA": {},
+    "NVDA": {
+        "https://finance.yahoo.com/video/elon-musk-ordered-nvidia-prioritize-135759131.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/etfs-tap-nvidias-10-1-140000914.html": {
+            "score": 0.9983,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/whats-going-nvidia-stock-friday-162927792.html": {
+            "score": 0.9886,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/nvidia-stock-crosses-3-trillion-market-cap-overtakes-apple-as-second-largest-co-in-us-market-191207506.html": {
+            "score": 0.9863,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/decoding-nvidia-corp-nvda-strategic-050134845.html": {
+            "score": 0.9903,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/jim-cramer-recommends-buying-apple-121452916.html": {
+            "score": 0.9937,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-nvidia-inches-higher-as-sp-500-nasdaq-hold-near-records-133040341.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-nvidia-set-to-build-on-milestones-as-sp-500-nasdaq-hold-near-records-115022026.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/black-hills-corporation-nyse-bkh-111058674.html": {
+            "score": 0.9994,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/whats-going-nvidia-stock-thursday-141432389.html": {
+            "score": 0.9865,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/nvidia-stock-pops-more-than-3-after-previewing-next-gen-rubin-ai-chip-154030352.html": {
+            "score": 0.9663,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/the-stock-market-took-a-narrow-road-to-record-highs-last-month-152132239.html": {
+            "score": 0.9898,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/bad-news-good-news-165548158.html": {
+            "score": 0.99,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/top-us-economic-indicator-every-235225936.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/sony-uber-cdns-strong-buy-061634110.html": {
+            "score": 0.9987,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/city-best-public-schools-us-013812616.html": {
+            "score": 0.9902,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/most-secular-country-world-013314841.html": {
+            "score": 0.9722,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/best-place-retire-canada-budget-170242584.html": {
+            "score": 0.9945,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/state-most-brilliant-students-us-011718425.html": {
+            "score": 0.9995,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/best-alternative-bloomberg-terminal-2024-004718752.html": {
+            "score": 0.9996,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-stocks-turn-positive-despite-worries-of-cracks-in-us-economy-160638984.html": {
+            "score": 0.6249,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/nvidia-closes-above-3-trillion-for-first-time-overtakes-apple-as-second-largest-co-in-us-market-191207802.html": {
+            "score": 0.9861,
+            "conclusion": "positive"
+        }
+    },
     "TSLA": {
-        "https://finance.yahoo.com/news/elon-musk-talks-mars-ai-and-threats-to-civilization--but-not-a-word-of-tesla-025840228.html": {
-            "score": -0.278,
-            "conclusion": "negative"
-        },
-        "https://finance.yahoo.com/news/down-57-highs-tesla-nasdaq-214758046.html": {
-            "score": 0.9988,
+        "https://finance.yahoo.com/video/elon-musk-ordered-nvidia-prioritize-135759131.html": {
+            "score": 0.6249,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/reddits-first-quarterly-report-follows-elon-musks-lead-morning-brief-100036766.html": {
-            "score": 0.9479,
+        "https://finance.yahoo.com/news/nvidia-stock-crosses-3-trillion-market-cap-overtakes-apple-as-second-largest-co-in-us-market-191207506.html": {
+            "score": 0.9863,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/5-things-i-want-to-hear-from-tesla-ceo-elon-musk-at-the-milken-conference-123017130.html": {
-            "score": 0.8666,
+        "https://finance.yahoo.com/news/tesla-stock-one-best-own-190322013.html": {
+            "score": 0.964,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/11-stocks-that-mattered-most-this-earnings-season-133609642.html": {
+        "https://finance.yahoo.com/news/companies-were-already-wary-of-2024-politics-trumps-verdict-could-solidify-that-caution-133032440.html": {
+            "score": 0.9812,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/ford-ceo-on-the-future-of-evs-detroit-and-his-relationship-with-teslas-elon-musk-101044343.html": {
+            "score": 0.9976,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/trump-friendly-billionaires-from-elon-musk-to-bill-ackman-offer-new-support-following-conviction-115411598.html": {
+            "score": 0.9931,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/trump-combines-small-donors-and-billionaires-for-a-record-fundraising-haul-in-may-162504864.html": {
+            "score": 0.9968,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/billionaires-in-silicon-valley-are-opening-up-to-trump-its-not-just-because-of-taxes-080028575.html": {
+            "score": 0.9991,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/nvidia-closes-above-3-trillion-for-first-time-overtakes-apple-as-second-largest-co-in-us-market-191207802.html": {
             "score": 0.9861,
             "conclusion": "positive"
         }
     },
     "GOOG": {
-        "https://finance.yahoo.com/news/apple-beats-q2-estimates-as-iphone-sales-decline-10-091232309.html": {
-            "score": 0.9876,
+        "https://finance.yahoo.com/news/nvidia-stock-crosses-3-trillion-market-cap-overtakes-apple-as-second-largest-co-in-us-market-191207506.html": {
+            "score": 0.9863,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/why-offerpad-opad-stock-down-162224984.html": {
-            "score": 0.6249,
+        "https://finance.yahoo.com/news/why-sportsmans-warehouse-spwh-stock-191639826.html": {
+            "score": 0.9967,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/matterport-nasdaq-mttr-reports-q1-210051046.html": {
-            "score": 0.9949,
+        "https://finance.yahoo.com/news/google-hires-eli-lilly-vet-as-cfo-while-search-giant-pivots-to-ai-163250703.html": {
+            "score": 0.9762,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/playstudioss-nasdaq-myps-q1-sales-202349318.html": {
-            "score": 0.9983,
+        "https://finance.yahoo.com/news/the-stock-market-took-a-narrow-road-to-record-highs-last-month-152132239.html": {
+            "score": 0.9898,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/google-debuts-499-pixel-8a-as-it-pushes-generative-ai-to-more-consumers-160025811.html": {
-            "score": 0.9793,
+        "https://finance.yahoo.com/news/ford-ceo-on-the-future-of-evs-detroit-and-his-relationship-with-teslas-elon-musk-101044343.html": {
+            "score": 0.9976,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/jll-nyse-jll-reports-upbeat-114022223.html": {
-            "score": 0.9986,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/purple-nasdaq-prpl-misses-q1-210503348.html": {
-            "score": 0.9971,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
-            "score": 0.6249,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/11-stocks-that-mattered-most-this-earnings-season-133609642.html": {
+        "https://finance.yahoo.com/news/nvidia-closes-above-3-trillion-for-first-time-overtakes-apple-as-second-largest-co-in-us-market-191207802.html": {
             "score": 0.9861,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/video/big-techs-bet-reach-net-095546370.html": {
+            "score": 0.6249,
             "conclusion": "positive"
         }
     },
     "META": {},
     "MSFT": {
-        "https://finance.yahoo.com/news/apple-beats-q2-estimates-as-iphone-sales-decline-10-091232309.html": {
-            "score": 0.9876,
+        "https://finance.yahoo.com/news/nvidia-stock-crosses-3-trillion-market-cap-overtakes-apple-as-second-largest-co-in-us-market-191207506.html": {
+            "score": 0.9863,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/why-offerpad-opad-stock-down-162224984.html": {
+        "https://finance.yahoo.com/news/why-sportsmans-warehouse-spwh-stock-191639826.html": {
+            "score": 0.9967,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/trump-friendly-billionaires-from-elon-musk-to-bill-ackman-offer-new-support-following-conviction-115411598.html": {
+            "score": 0.9931,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/the-stock-market-took-a-narrow-road-to-record-highs-last-month-152132239.html": {
+            "score": 0.9898,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/live/stock-market-today-nvidia-set-to-build-on-milestones-as-sp-500-nasdaq-hold-near-records-115022026.html": {
             "score": 0.6249,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/these-3-stocks-are-poised-to-benefit-from-the-massive-energy-transition-080042965.html": {
-            "score": 0.9965,
+        "https://finance.yahoo.com/news/warren-buffetts-son-howard-buffett-on-his-life-as-the-potential-next-chairman-of-berkshire-hathaway-125023078.html": {
+            "score": 0.9267,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/matterport-nasdaq-mttr-reports-q1-210051046.html": {
-            "score": 0.9949,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/playstudioss-nasdaq-myps-q1-sales-202349318.html": {
-            "score": 0.9983,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/jll-nyse-jll-reports-upbeat-114022223.html": {
-            "score": 0.9986,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/purple-nasdaq-prpl-misses-q1-210503348.html": {
-            "score": 0.9971,
+        "https://finance.yahoo.com/video/big-techs-bet-reach-net-095546370.html": {
+            "score": 0.6249,
             "conclusion": "positive"
         }
     },
     "NFLX": {
-        "https://finance.yahoo.com/news/golden-opportunity-enter-u-stock-123000515.html": {
-            "score": 0.9998,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/insider-sale-co-ceo-gregory-170057689.html": {
-            "score": 0.9582,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/insider-sale-director-anne-sweeney-064725305.html": {
-            "score": 0.6249,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/reddits-first-quarterly-report-follows-elon-musks-lead-morning-brief-100036766.html": {
-            "score": 0.9479,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/disney-reaches-profitability-entertainment-streaming-141736700.html": {
-            "score": 0.9973,
+        "https://finance.yahoo.com/news/netflix-vs-disney-stock-better-212238263.html": {
+            "score": 0.9561,
             "conclusion": "positive"
         }
     },
     "AMZN": {
-        "https://finance.yahoo.com/news/golden-opportunity-enter-u-stock-123000515.html": {
-            "score": 0.9998,
+        "https://finance.yahoo.com/news/etfs-tap-nvidias-10-1-140000914.html": {
+            "score": 0.9983,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
-            "score": 0.6249,
+        "https://finance.yahoo.com/news/nvidia-stock-crosses-3-trillion-market-cap-overtakes-apple-as-second-largest-co-in-us-market-191207506.html": {
+            "score": 0.9863,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/best-buy-upgraded-target-initiated-135002273.html": {
+            "score": 0.993,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/the-stock-market-took-a-narrow-road-to-record-highs-last-month-152132239.html": {
+            "score": 0.9898,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/costco-gobbles-discretionary-market-share-143236173.html": {
+            "score": 0.9969,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/teamsters-tie-staten-island-amazon-102611016.html": {
+            "score": 0.9993,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/atlas-air-end-amazon-flights-115827603.html": {
+            "score": 0.9984,
+            "conclusion": "positive"
+        },
+        "https://finance.yahoo.com/news/nvidia-closes-above-3-trillion-for-first-time-overtakes-apple-as-second-largest-co-in-us-market-191207802.html": {
+            "score": 0.9861,
             "conclusion": "positive"
         }
     },
     "ADBE": {},
     "DIS": {
-        "https://finance.yahoo.com/news/disney-reaches-profitability-entertainment-streaming-141736700.html": {
-            "score": 0.9973,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/live/stock-market-today-stocks-open-higher-disney-sinks-after-earnings-133454824.html": {
-            "score": 0.6249,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/live/stock-market-today-us-futures-take-a-breather-as-disney-earnings-land-110634487.html": {
-            "score": 0.6249,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/warner-bros-discovery-earnings-preview-investors-eye-nba-updates-amid-linear-tv-turmoil-185924559.html": {
+        "https://finance.yahoo.com/news/walt-disney-company-dis-operating-121124187.html": {
             "score": 0.9923,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
-            "score": 0.6249,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/live/stock-market-today-tech-drags-stocks-lower-as-rally-hits-pause-121113587.html": {
-            "score": 0.6249,
+        "https://finance.yahoo.com/news/netflix-vs-disney-stock-better-212238263.html": {
+            "score": 0.9561,
             "conclusion": "positive"
         }
     },
     "JPM": {
-        "https://finance.yahoo.com/news/1-regeneron-misses-profit-estimates-104405423.html": {
-            "score": 0.8402,
-            "conclusion": "positive"
-        }
-    },
-    "GOOGL": {
-        "https://finance.yahoo.com/news/golden-opportunity-enter-u-stock-123000515.html": {
-            "score": 0.9998,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/apple-beats-q2-estimates-as-iphone-sales-decline-10-091232309.html": {
-            "score": 0.9876,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/keep-buying-alphabet-stock-nasdaq-023356388.html": {
-            "score": 0.9993,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/google-debuts-499-pixel-8a-as-it-pushes-generative-ai-to-more-consumers-160025811.html": {
-            "score": 0.9793,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/live/stock-market-today-stocks-surge-as-jobs-report-revives-rate-cut-bets-apple-jumps-6-124351520.html": {
+        "https://finance.yahoo.com/video/big-techs-bet-reach-net-095546370.html": {
             "score": 0.6249,
             "conclusion": "positive"
         },
-        "https://finance.yahoo.com/news/11-stocks-that-mattered-most-this-earnings-season-133609642.html": {
-            "score": 0.9861,
+        "https://ca.finance.yahoo.com/news/warren-buffett-controls-3-treasury-130200874.html": {
+            "score": 0.9888,
             "conclusion": "positive"
         }
     },
-    "RDDT": {
-        "https://finance.yahoo.com/news/reddits-first-quarterly-report-follows-elon-musks-lead-morning-brief-100036766.html": {
-            "score": 0.9479,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/the-meme-stock-surge-doesnt-appear-to-be-the-ominous-signal-it-has-been-100043985.html": {
-            "score": 0.8796,
-            "conclusion": "positive"
-        },
-        "https://finance.yahoo.com/news/live/stock-market-today-tech-drags-stocks-lower-as-rally-hits-pause-121113587.html": {
-            "score": 0.6249,
-            "conclusion": "positive"
-        }
-    }
+    "RDDT": {}
 }

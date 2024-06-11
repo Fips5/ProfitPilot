@@ -40,6 +40,11 @@ def extract_symbols(json_file_path):
 def get_news_raw_data(subject, origin_date, API_KEY):
     main_url = f'https://newsapi.org/v2/everything?q={subject}&from={origin_date}&sortBy=popularity&apiKey={API_KEY}'
     news = requests.get(main_url).json()
+    
+    if 'articles' not in list(news.keys()):
+        print("CHNGE API KEY INDEX. PROGRAM STOPPING")
+        exit() 
+
     articles = news['articles']
     df = pd.DataFrame(articles)
     return df
@@ -83,7 +88,7 @@ tickers = extract_names(full_stock_list_path)
 comp_names =  extract_symbols(full_stock_list_path)
 # Get news articles 
 
-ticker_news = get_news_for_tickers(tickers, key = NEWS_API_KEY[1])
+ticker_news = get_news_for_tickers(tickers, key = NEWS_API_KEY[2])
 
 # Save 
 output_path = r'C:\Users\David\Documents\ProfitPilot\V5\news_extrction\output.json'

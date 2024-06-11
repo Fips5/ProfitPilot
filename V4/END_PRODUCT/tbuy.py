@@ -1,0 +1,2 @@
+def buy():
+    print('BUY')

@@ -9,6 +9,13 @@ import os
 TIME = 35
 MAX_ENTRIES = 20
 
+def clear_file(file_path):
+    try:
+        with open(file_path, "w") as json_file:
+            print('***FILE CEARED***')
+    except Exception as e:
+        print(f"Error creating the JSON file: {e}")
+
 coordonates_json_path = r'C:\Users\David\Documents\ProfitPilot\V5\XY\coordinates.json'
 
 def read_coordinates_from_json(filename):
@@ -16,9 +23,9 @@ def read_coordinates_from_json(filename):
         coordinates = json.load(f)
     return coordinates
 
-print('\n \n \n \n ')
+print('\n \n  ')
 print('BEFORE STARTING LOCATE THE COORDONATES TO GET EXTRACT THE PRICES')
-print('\n \n \n \n ')
+print('\n \n ')
 
 coordinates_buy = read_coordinates_from_json(coordonates_json_path)
 
@@ -30,6 +37,9 @@ json_paths = [
     r'C:\Users\David\Documents\ProfitPilot\V5\json_prices\price_5.json',
     r'C:\Users\David\Documents\ProfitPilot\V5\json_prices\price_6.json'
 ]
+for path in json_paths:
+    clear_file(path)
+    
 '''
 coordinates_buy = [
     (1047, 259, 1111, 293),     #1
@@ -95,6 +105,7 @@ def tesseract(coordinates_buy, json_paths):
                 #print(price)
             #print(prices)
             save_price_to_data(prices, json_paths)
+            print('still running the oprice extraction')
             time.sleep(TIME)
     except Exception as e:
         print("An error occurred:", e)

@@ -34,41 +34,59 @@ symbol_list = extract_keys_from_json(symbol_list_json_path)
 
 premarket_python_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\Premarket\premarket.py'
 
-subprocess.run(['python', premarket_python_file_path])
+with open('run_check.json', 'r') as json_file:
+    mo = json.load(json_file)
+    m = mo["running"]
+
+if m != 1:
+    subprocess.run(['python', premarket_python_file_path], shell=True)
+
 
 def continue_analysis():
-    while True:
-        user_input = input("Do you want to continue live analysis? (y/n): ").lower()
-        if user_input == 'y':
-            return True
+    user_input = input("Do you want to continue live analysis? (y/n): ").lower()
+    if user_input == 'y':
+            n = True
+            return n
 
-        elif user_input == 'n':
-            return False
-        else:
-            print("Be serious! Please input 'y' or 'n'.")
-            user_input = input("You have 5 seconds to reconsider: ").lower()
-            time.sleep(5)
-            if user_input not in ['y', 'n']:
-                print("You have been warned! Goodbye!")
-                break
+    elif user_input == 'n':
+            n = True
+            return n
+    else:
+        print("Be serious! Please input 'y' or 'n'.")
+        user_input = input("You have 5 seconds to reconsider: ").lower()
+        time.sleep(5)
+        if user_input not in ['y', 'n']:
+            print("You have been warned! Goodbye!")
 
+if m != 1:
+    continue_condition = continue_analysis()
+    continue_condition = True
 
-print('***PREMRKET ANLYSIS DONE***')
+if m == 1:
+    print('STOPING PROGRAM')
+    time.sleep(10)
+    continue_condition = False
 
 # Example usage:
-if continue_analysis() == True:
-    print("***STARTING LIVE PRICE ANLYSIS")
+if continue_condition == True and m != 1:
+    print('***PREMRKET ANLYSIS DONE***')
+    print("***STARTING LIVE PRICE ANLYSIS***")
     subprocess.run(['python', xy_file])
     time.sleep(3)
     
     price_p1 = multiprocessing.Process(target = extract_live_price, args= [])
-    price_p2 = multiprocessing.Process(target = analyse_live_price, args= [])
 
     finish = time.perf_counter()
 
     if __name__ == '__main__':
         price_p1.start()
-        price_p2.start()
+    
+    run_check = 1
+    data_to_upload = {"running": run_check}
+    with open('run_check.json', 'w') as json_file:
+        json.dump(data_to_upload, json_file)
 
+    subprocess.run(['python', price_analysis_file])
     finish = time.perf_counter()
+    continue_condition = False
     print("Analysis stopped.", finish)
