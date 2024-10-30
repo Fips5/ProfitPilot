@@ -22,7 +22,11 @@ def extract_keys_from_json(json_file_path):
 xy_file = r'C:\Users\David\Documents\ProfitPilot\V5\XY\find_xy.py'
 price_extraction_file = r"C:\Users\David\Documents\ProfitPilot\V5\Live_Price_Analysis\price.py"
 price_analysis_file = r"C:\Users\David\Documents\ProfitPilot\V5\Live_Price_Analysis\price_analysis.py"
+coordonadea_sell_file_path = r'C:\Users\David\Documents\ProfitPilot\V5\XY\find_xy_sell.py'
 
+
+def extract_live_price():
+    subprocess.run(['python', coordonadea_sell_file_path])
 def extract_live_price():
     subprocess.run(['python', price_extraction_file])
 def analyse_live_price():
