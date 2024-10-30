@@ -1,9 +1,7 @@
 import pyautogui
 import json
 
-print('\n \n \n \n ')
-print('BEFORE STARTING LOCATE THE COORDONATES TO GET EXTRACT THE PRICES')
-print('\n \n \n \n ')
+print('\n \n BUY CORDONATES \n \n')
 
 coordonates_path = 'XY\coordinates.json'
 
