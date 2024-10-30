@@ -65,5 +65,3 @@ def close(symbol):
     # Write the updated close orders to close_orders.json
     save_json_data(close_orders_path, close_orders)
 
-symbol_to_close = 'NFLX'
-close(symbol_to_close)
